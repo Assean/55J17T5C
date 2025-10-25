@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+        <div class="title">
+            <h1 class="text-center">關於我</h1>
+        </div>
+        <div class="btn text-right">
+            <a class="text-center" href="index.html">首頁</a>
+            <a class="text-center" href="aboutme.html">關於我</a>
+            <a class="text-center" href="myfamily.html">我的家</a>
+            <a class="text-center" href="email.html">聯絡我</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="wrap">
+            <div class="my-photo"></div>
+            <div class="my-info">
+                <div class="tags">
+                    <div class="tag active">個人資料</div>
+                    <div class="tag">學歷</div>
+                    <div class="tag">興趣</div>
+                    <div class="tag">我的夢想</div>
+                </div>
+                <div class="datas">
+                    <div class="data active">
+                        姓名:xxxxx<br>
+                    </div>
+                    <div class="data">
+                        學校:輔仁大學
+                    </div>
+                    <div class="data">
+                        我喜歡看電影.......
+                    </div>
+                    <div class="data">
+                        我想賺大錢
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-outer text-center">
+        <div class="social">
+            <div>FB</div>
+            <div>IG</div>
+            <div>G+</div>
+            <div>Line</div>
+        </div>
+    <div class="footer">
+        我的家頁尾版權
+    </div>
+    </div>
+</body>
+</html>
+<script>
+$(".tag").on('click',function(){
+    let idx=$(this).index()
+    //console.log(idx)
+    $(".data,.tag").removeClass("active");
+    
+    $(".data").eq(idx).addClass('active')
+    $(".tag").eq(idx).addClass('active')
+})
+</script>
